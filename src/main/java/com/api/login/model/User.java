@@ -17,13 +17,13 @@ public class User {
 	@Column(name = "id", updatable = false, unique = true, nullable = false)
 	private UUID id_user;
     
-    @Column(name = "name", unique = false, length = 30)
+    @Column(name = "name", unique = false, length = 30, nullable = false)
     private String name;
 
-    @Column(name = "email", unique = true, length = 30)
+    @Column(name = "email", unique = true, length = 30, nullable = false)
     private String email;
     
-    @Column(name = "password", unique = false, length = 30)
+    @Column(name = "password", unique = false, length = 30, nullable = false)
     private String password;
 
     public UUID getId_user() {
@@ -48,10 +48,5 @@ public class User {
 
     public void setPassword(String password){
         this.password = password;
-    }
-
-    public Boolean isPasswordTrue(String passwordUsedToLogin){
-        if(this.password == passwordUsedToLogin) return true;
-        else return false;
     }
 }
