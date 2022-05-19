@@ -1,5 +1,7 @@
 package com.api.login.controllers;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import com.api.login.model.User;
@@ -32,7 +34,7 @@ public class CreateUserController {
         @RequestParam("name") String name,
         @RequestParam("email") String email,
         @RequestParam("password") String password
-        ){
+        ) throws NoSuchAlgorithmException, UnsupportedEncodingException {
             service.save(name, email, password);
         }
 }
