@@ -1,5 +1,6 @@
 package com.api.login.services;
 
+import com.api.login.dto.UserDto;
 import com.api.login.model.User;
 import com.api.login.repositories.UserRepositories;
 
@@ -14,24 +15,24 @@ public class CreateUserService {
 
     @Autowired
     private PasswordEncoder encoder;
-
-    public User save(String name, String email, String password){
-        if(repository.findByEmail(email) != null){
+        
+    public User save(UserDto userDto){
+        if(repository.findByEmail(userDto.getEmail()) != null){
             throw new Error("Email already exists!");
         }
 
-        if(email == null){
+        if(userDto.getName() == null){
             throw new Error("Name and/or password not defined!");
         }
 
-        if(password == null){
+        if(userDto.getPassword() == null){
             throw new Error("Name and/or password not defined!");
         }
 
         User user = new User();
-        user.setName(name);
-        user.setEmail(email);
-        user.setPassword(encoder.encode(password));
+        user.setName(userDto.getName());
+        user.setEmail(userDto.getEmail());
+        user.setPassword(encoder.encode(userDto.getPassword()));
 
         repository.save(user);
 
