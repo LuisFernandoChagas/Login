@@ -23,7 +23,7 @@ public class User {
     @Column(name = "email", unique = true, length = 30, nullable = false)
     private String email;
     
-    @Column(name = "password", unique = false, length = 30, nullable = false)
+    @Column(name = "password", unique = false, length = 100, nullable = false)
     private String password;
 
     public UUID getId_user() {
@@ -48,5 +48,15 @@ public class User {
 
     public void setPassword(String password){
         this.password = password;
+    }
+
+    public Boolean comparePassword(String password){
+        if(this.password.equals(password)) return true;
+        else return false;
+    }
+
+    // Retirar antes do update
+    public String getPassword() {
+        return password;
     }
 }
