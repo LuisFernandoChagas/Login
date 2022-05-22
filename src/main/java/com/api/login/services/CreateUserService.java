@@ -21,7 +21,7 @@ public class CreateUserService {
     public User save(UserDto userDto){
         Optional<User> userRepository = repository.findByEmail(userDto.getEmail());
 
-        if(!userRepository.isEmpty()){
+        if(userRepository != null){
             throw new Error("Email already exists!");
         }
 
