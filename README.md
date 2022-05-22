@@ -4,8 +4,6 @@ Api para criação e autenticação de usuários
 
 ## 🚀 Começando
 
----
-
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
 ### 📋 Pré-requisitos
@@ -52,4 +50,4 @@ Feito por Luis Chagas. Entre em contato! 👇
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lflchagas@gmail.com)](mailto:lflchagas@gmail.com)
 
 ---
-⌨️ com  por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ com 💪 e ☕ por [Luis Chagas](https://github.com/LuisFernandoChagas) 😊
