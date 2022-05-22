@@ -27,6 +27,7 @@ $ cd ./login
 ## 🛠️ Ferramentas utilizadas
 
 * [Visual Studio Code](https://netbeans.apache.org/download/nb126/nb126.html) - IDE escolhida
+* [Insomnia](https://insomnia.rest/download) - Ferramenta para teste de API
 * [MySQL](https://docs.oracle.com/en-us/iaas/mysql-database/doc/getting-started.html) - Banco de Dados utilizado
 * [README-PTBR.md](https://gist.github.com/lohhans/f8da0b147550df3f96914d3797e9fb89) - Utilizado como template para este README
 
