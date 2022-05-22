@@ -1,5 +1,7 @@
 package com.api.login.services;
 
+import java.util.Optional;
+
 import com.api.login.dto.UserDto;
 import com.api.login.model.User;
 import com.api.login.repositories.UserRepositories;
@@ -17,7 +19,9 @@ public class CreateUserService {
     private PasswordEncoder encoder;
         
     public User save(UserDto userDto){
-        if(repository.findByEmail(userDto.getEmail()) != null){
+        Optional<User> userRepository = repository.findByEmail(userDto.getEmail());
+
+        if(!userRepository.isEmpty()){
             throw new Error("Email already exists!");
         }
 

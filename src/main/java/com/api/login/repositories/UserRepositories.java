@@ -1,5 +1,6 @@
 package com.api.login.repositories;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import com.api.login.model.User;
@@ -9,5 +10,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepositories extends JpaRepository<User, UUID> {
-    User findByEmail(String email);
+    Optional<User> findByEmail(String email);
 }
