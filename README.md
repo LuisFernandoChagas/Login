@@ -37,7 +37,7 @@ $ cd login
 ![Autenticar usuário](https://github.com/LuisFernandoChagas/Login/blob/main/src/assets/Authenticate_user.png)
 
 - Listar usuários
-![Listar usuários](https://github.com/LuisFernandoChagas/Login/blob/main/src/assets/List_user.png)
+![Listar usuários](https://github.com/LuisFernandoChagas/Login/blob/main/src/assets/List_users.png)
 
 ## 🛠️ Ferramentas utilizadas
 
