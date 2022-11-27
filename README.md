@@ -10,26 +10,40 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 - [Java](https://www.oracle.com/java/technologies/downloads/) - JDK 8+
 - [Git](https://git-scm.com/) - Opcional, porém recomendado. Necessário para clonar o repositório do projeto utilizando Git Bash.
+- [MySQL](https://dev.mysql.com/downloads/installer/) - Windows (x86, 32-bit), MSI Installer.
 
 ### 🔧 Instalação
 
 
 ``` bash
-#Clonar repositório
-$ git clone https://github.com/LuisFernandoChagas/Login.git
+# Clonar repositório
+$ git pull https://github.com/LuisFernandoChagas/Login.git
 
 # Access directory
-$ cd ./login
+$ cd login
 
-# Atualizar arquivos pom.xml e application.properties de acordo com o seu banco de dados
+# É necessário criar um banco de dados MySQL "login".
+# No arquivo "resources/application.properties" alterar o valor da variável "spring.datasource.password" com a senha do seu banco de dados.
+
+# Após seguir todos os passos, o programa está pronto para funcionar
 ```
+
+## 💻 Funcionando
+
+- Criar usuário
+![Criar usuário](https://github.com/LuisFernandoChagas/Login/blob/main/src/assets/Create_user.png)
+
+- Autenticar usuário
+![Autenticar usuário](https://github.com/LuisFernandoChagas/Login/blob/main/src/assets/Authenticate_user.png)
+
+- Listar usuários
+![Listar usuários](https://github.com/LuisFernandoChagas/Login/blob/main/src/assets/List_user.png)
 
 ## 🛠️ Ferramentas utilizadas
 
 * [Visual Studio Code](https://netbeans.apache.org/download/nb126/nb126.html) - IDE escolhida
 * [Insomnia](https://insomnia.rest/download) - Ferramenta para teste de API
 * [MySQL](https://docs.oracle.com/en-us/iaas/mysql-database/doc/getting-started.html) - Banco de Dados utilizado
-* [README-PTBR.md](https://gist.github.com/lohhans/f8da0b147550df3f96914d3797e9fb89) - Utilizado como template para este README
 
 ## 💡 Recursos utilizados
 

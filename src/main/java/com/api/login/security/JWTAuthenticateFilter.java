@@ -60,7 +60,7 @@ public class JWTAuthenticateFilter extends UsernamePasswordAuthenticationFilter{
         FilterChain chain,
         Authentication authResult
     ) throws IOException, ServletException {
-        
+                
         DetailUserData userData = (DetailUserData) authResult.getPrincipal();
 
         String token = JWT.create()

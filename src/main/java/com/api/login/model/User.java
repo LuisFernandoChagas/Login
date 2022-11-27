@@ -55,7 +55,6 @@ public class User {
         else return false;
     }
 
-    // Retirar antes do update
     public String getPassword() {
         return password;
     }
