@@ -21,15 +21,11 @@ public class CreateUserService {
     public User save(UserDto userDto){
         Optional<User> userRepository = repository.findByEmail(userDto.getEmail());
 
-        if(userRepository != null){
-            throw new Error("Email already exists!");
+        if(!userRepository.isEmpty()){
+            throw new Error("Email '" + userRepository.get().getEmail() + "' already exists!");
         }
 
-        if(userDto.getName() == null){
-            throw new Error("Name and/or password not defined!");
-        }
-
-        if(userDto.getPassword() == null){
+        if(userDto.getName().isEmpty() || userDto.getPassword().isEmpty()){
             throw new Error("Name and/or password not defined!");
         }
 

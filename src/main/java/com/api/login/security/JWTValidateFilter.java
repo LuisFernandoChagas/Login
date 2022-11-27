@@ -56,7 +56,10 @@ public class JWTValidateFilter extends BasicAuthenticationFilter {
     }
 
     private UsernamePasswordAuthenticationToken getAuthenticationToken(String token){
-        String user = JWT.require(Algorithm.HMAC512(JWTAuthenticateFilter.TOKEN_SENHA)).build().verify(token).getSubject();
+        String user = JWT.require(Algorithm.HMAC512(JWTAuthenticateFilter.TOKEN_SENHA))
+        .build()
+        .verify(token)
+        .getSubject();
 
         if(user == null){
             return null;

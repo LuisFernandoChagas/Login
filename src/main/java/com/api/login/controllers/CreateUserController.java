@@ -25,12 +25,12 @@ public class CreateUserController {
     @Autowired
     private CreateUserService service;
 
-    @GetMapping("/list")
+    @GetMapping("list")
     public List<User> findAll(){
         return repository.findAll();
     }
 
-    @PostMapping("/add")
+    @PostMapping("add")
     public ResponseEntity<User> save(
         @RequestBody UserDto userDto
     ){
