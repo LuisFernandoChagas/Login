@@ -9,13 +9,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name = "User")
 public class User {
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", updatable = false, unique = true, nullable = false)
-	private UUID id_user;
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private UUID id_user;
     
     @Column(name = "name", unique = false, length = 30, nullable = false)
     private String name;
@@ -23,6 +26,7 @@ public class User {
     @Column(name = "email", unique = true, length = 30, nullable = false)
     private String email;
     
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(name = "password", unique = false, length = 100, nullable = false)
     private String password;
 
